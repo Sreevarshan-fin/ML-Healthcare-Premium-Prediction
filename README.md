@@ -52,7 +52,7 @@ This project builds an end-to-end machine learning solution to predict annual he
 - [Correlation & Multicollinearity Analysis](#correlation--multicollinearity-analysis)
 - [Feature Scaling](#feature-scaling)
 - [8) Model Evaluation](#8-model-evaluation)
-
+- [9)Model Error Analysis](#9-model-error-analysis)
 
 
 
