@@ -579,6 +579,7 @@ The **tuned XGBoost Regressor** is selected as the **production model** because 
 - Better reflects real-world health insurance dynamics by modeling complex, non-linear patterns.
 
 -----------------------
+
 ## 📄 **Model Error Analysis**
 
 #### 📊 **1. Residual Distribution (Diff %)**
@@ -593,9 +594,9 @@ Most residuals are tightly centered around 0%, indicating strong predictive accu
 
 The distribution is **right-skewed**:
 
-Large positive errors occur more frequently.
+- Large positive errors occur more frequently.
 
-The left tail (underpredictions) is minimal.
+- The left tail (underpredictions) is minimal.
 
 **Interpretation**
 
@@ -603,9 +604,9 @@ The model overpredicts more often than it underpredicts.
 
 A small subset of customers shows very high errors (40–90%), suggesting:
 
-Their behavior differs from the majority.
+- Their behavior differs from the majority.
 
-Current features do not fully explain their premium patterns.
+- Current features do not fully explain their premium patterns.
 
 #### 📈 **2. Extreme Error Thresholds — 10% vs 40%:**
 
@@ -636,11 +637,11 @@ Only a small minority drives the extreme error tail.
 
 **The age histogram shows:**
 
-Most customers are aged 18–25.
+- Most customers are aged 18–25.
 
-Very few are above 30.
+- Very few are above 30.
 
-Ages 40–60 are nearly absent.
+- Ages 40–60 are nearly absent.
 
 **Impact on the model**
 
@@ -654,7 +655,7 @@ The model is trained primarily on young customers, making predictions reliable f
 
 - More extreme-error cases in the far-right tail
 
-🧠 4. Overall Insight
+### 🧠 **4. Overall Insight**
 
 ✔ The model performs strongly for the dominant demographic (18–25 years).
 
