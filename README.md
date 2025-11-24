@@ -639,7 +639,8 @@ These customers represent the largest prediction failures, tied to demographic i
 #### 👥 **3. Age Distribution & Its Influence on Errors**
 
 <img width="640" height="480" alt="age_error" src="https://github.com/user-attachments/assets/5cac7dfe-cc93-4e80-bb28-6939f39b296d" />
-What the age histogram shows
+
+**What the age histogram shows**
 
 - Majority of customers are aged 18–25.
 
