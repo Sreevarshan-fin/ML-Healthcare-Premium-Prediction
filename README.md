@@ -35,12 +35,17 @@
 │
 ├── 📁 notebooks
 │   ├── 00_premium_full_analysis.ipynb
+
 │   ├── 01_seg_premium_lt25.ipynb
+
 │   ├── 02_seg_premium_gt25.ipynb
+
 │   ├── 03_seg_genetic_lt25.ipynb
+
 │   └── 04_seg_genetic_gt25.ipynb
 │
 ├── README.md
+
 └── other project files...
 
 
