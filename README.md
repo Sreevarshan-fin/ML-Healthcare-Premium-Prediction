@@ -579,56 +579,64 @@ The **tuned XGBoost Regressor** is selected as the **production model** because 
 - Better reflects real-world health insurance dynamics by modeling complex, non-linear patterns.
 
 -----------------------
-
 ## 📄 **Model Error Analysis**
 
 #### 📊 **1. Residual Distribution (Diff %)**
 
-This plot shows how much the model’s predictions differ from the actual values (in percentage).
+<img width="886" height="641" alt="image" src="https://github.com/user-attachments/assets/a1c6438f-4510-4b5d-985f-d0b01cde5e3e" />
 
-**What the distribution shows**
+This plot shows how much the model’s predictions differ from actual values (in percentage).
 
-Most residuals are tightly centered around 0%, indicating that the model is accurate for a large portion of customers.
+**Key Insights**
 
-**The distribution is not symmetric:**
+Most residuals are tightly centered around 0%, indicating strong predictive accuracy.
 
-A noticeable right tail represents large positive errors.
+The distribution is **right-skewed**:
 
-The left tail is much smaller.
+Large positive errors occur more frequently.
+
+The left tail (underpredictions) is minimal.
 
 **Interpretation**
 
-The model tends to overpredict more than it underpredicts.
+The model overpredicts more often than it underpredicts.
 
-A small subset of customers shows very high errors (40–90%), which indicates:
+A small subset of customers shows very high errors (40–90%), suggesting:
 
-They behave differently from the majority.
+Their behavior differs from the majority.
 
-The current feature set does not fully capture their patterns.
+Current features do not fully explain their premium patterns.
 
-#### 📈 **2. Extreme Error Thresholds (10% vs 40%)**
+#### 📈 **2. Extreme Error Thresholds — 10% vs 40%:**
 
-**At a 10% threshold**
+**At 10% Threshold**
 
-Customers in the test set with |prediction error| ≥ 10%: **4,478**  
+Customers with |error| ≥ 10%: 4,478
 
-This represents roughly one-third of the X_test samples and reflects moderate-to-high error cases.
+This is roughly one-third of the test dataset.
 
-**At a 40% threshold**
+Indicates a sizable portion with moderate-to-high errors.
 
-Only the most extreme cases remain.
+**At 40% Threshold**
 
-Expected count reduces to 300–900 customers.
+Only 300–900 customers remain.
 
-**Why this happens**
+Represents the far-right tail (largest prediction failures).
 
-Only a small portion of observations fall into the far-right tail, representing the largest prediction failures.
+**Why This Happens**
+
+Most observations fall close to the center (low error).
+
+Only a small minority drives the extreme error tail.
 
 #### 👥 **3. Age Distribution & Its Influence on Errors**
 
+<img width="640" height="480" alt="age_error" src="https://github.com/user-attachments/assets/5cac7dfe-cc93-4e80-bb28-6939f39b296d" />
+
+
 **The age histogram shows:**
 
-Majority of customers are aged 18–25.
+Most customers are aged 18–25.
 
 Very few are above 30.
 
@@ -636,22 +644,20 @@ Ages 40–60 are nearly absent.
 
 **Impact on the model**
 
-The model is mostly trained on young customers, making predictions reliable for this group.
+The model is trained primarily on young customers, making predictions reliable for this group.
 
-**Older customers have very limited representation:**
+**Older customers are underrepresented, leading to:**
 
-The model cannot learn their behavior effectively.
+- Poorer pattern learning
 
-This results in higher error rates.
+- Higher prediction errors
 
-Many of the extreme errors in the residual plot come from these underrepresented age groups.
+- More extreme-error cases in the far-right tail
 
-#### 🧠 **4. Overall Insight**
+🧠 4. Overall Insight
 
 ✔ The model performs strongly for the dominant demographic (18–25 years).
 
-✔ Errors increase significantly for underrepresented groups (30+ years).
+✔ Error rates increase significantly for underrepresented groups (30+ years).
 
-✔ The majority of extreme errors come from customers the model has rarely seen during training.
-
-----------------------------------------------------------------------------------------------------------------------------------------------
+✔ Most extreme errors come from customers the model has rarely seen during training.
