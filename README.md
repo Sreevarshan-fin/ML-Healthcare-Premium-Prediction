@@ -31,9 +31,14 @@
 
 #### **Project Workflow Structure**
 
-📦 premium_prediction_project
+## 📁 Project Workflow Structure
+
+premium_prediction_project/
+
 │
-├── 📁 notebooks
+
+├── notebooks/
+
 │   ├── 00_premium_full_analysis.ipynb
 
 │   ├── 01_seg_premium_lt25.ipynb
@@ -43,11 +48,12 @@
 │   ├── 03_seg_genetic_lt25.ipynb
 
 │   └── 04_seg_genetic_gt25.ipynb
+
 │
+
 ├── README.md
 
 └── other project files...
-
 
 #### **Click Here to Launch the App**
 **[![Open in Streamlit](https://img.shields.io/badge/Launch%20App-Streamlit-%23FF4B4B?logo=streamlit&logoColor=white&style=for-the-badge&labelColor=FF4B4B)](https://ml-healthcare-premium-prediction-7qrpw78zqct4zhdm7u8v2d.streamlit.app/)**
