@@ -580,7 +580,7 @@ The **tuned XGBoost Regressor** is selected as the **production model** because 
 
 -----------------------
 
-## 📄 **Model Error Analysis **
+## 📄 **Model Error Analysis**
 
 #### 📊 **1. Residual Distribution (Diff %)**
 
@@ -590,7 +590,7 @@ This plot shows how much the model’s predictions differ from the actual values
 
 Most residuals are tightly centered around 0%, indicating that the model is accurate for a large portion of customers.
 
-The distribution is not symmetric:
+**The distribution is not symmetric:**
 
 A noticeable right tail represents large positive errors.
 
