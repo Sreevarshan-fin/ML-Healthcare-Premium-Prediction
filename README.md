@@ -578,4 +578,82 @@ The **tuned XGBoost Regressor** is selected as the **production model** because 
 - Reduces average prediction error, improving both **pricing fairness** and **portfolio profitability**.  
 - Better reflects real-world health insurance dynamics by modeling complex, non-linear patterns.
 
+-----------------------
+
+## 📄 **Model Error Analysis **
+
+#### 📊 **1. Residual Distribution (Diff %)**
+
+This plot shows how much the model’s predictions differ from the actual values (in percentage).
+
+**What the distribution shows**
+
+Most residuals are tightly centered around 0%, indicating that the model is accurate for a large portion of customers.
+
+The distribution is not symmetric:
+
+A noticeable right tail represents large positive errors.
+
+The left tail is much smaller.
+
+**Interpretation**
+
+The model tends to overpredict more than it underpredicts.
+
+A small subset of customers shows very high errors (40–90%), which indicates:
+
+They behave differently from the majority.
+
+The current feature set does not fully capture their patterns.
+
+#### 📈 **2. Extreme Error Thresholds (10% vs 40%)**
+
+**At a 10% threshold**
+
+Customers with |prediction error| ≥ 10%: 4,478 rows
+
+This is about one-third of the dataset.
+
+These represent moderate-to-high error cases.
+
+**At a 40% threshold**
+
+Only the most extreme cases remain.
+
+Expected count reduces to 300–900 customers.
+
+**Why this happens**
+
+Only a small portion of observations fall into the far-right tail, representing the largest prediction failures.
+
+#### 👥 **3. Age Distribution & Its Influence on Errors**
+
+**The age histogram shows:**
+
+Majority of customers are aged 18–25.
+
+Very few are above 30.
+
+Ages 40–60 are nearly absent.
+
+**Impact on the model**
+
+The model is mostly trained on young customers, making predictions reliable for this group.
+
+**Older customers have very limited representation:**
+
+The model cannot learn their behavior effectively.
+
+This results in higher error rates.
+
+Many of the extreme errors in the residual plot come from these underrepresented age groups.
+
+#### 🧠 **4. Overall Insight**
+
+✔ The model performs strongly for the dominant demographic (18–25 years).
+
+✔ Errors increase significantly for underrepresented groups (30+ years).
+
+✔ The majority of extreme errors come from customers the model has rarely seen during training.
+
 ----------------------------------------------------------------------------------------------------------------------------------------------
