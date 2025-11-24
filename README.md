@@ -610,11 +610,9 @@ The current feature set does not fully capture their patterns.
 
 **At a 10% threshold**
 
-Customers with |prediction error| ≥ 10%: 4,478 rows
+Customers in the test set with |prediction error| ≥ 10%: **4,478**  
 
-This is about one-third of the dataset.
-
-These represent moderate-to-high error cases.
+This represents roughly one-third of the X_test samples and reflects moderate-to-high error cases.
 
 **At a 40% threshold**
 
