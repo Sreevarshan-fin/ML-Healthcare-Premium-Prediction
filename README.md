@@ -582,83 +582,93 @@ The **tuned XGBoost Regressor** is selected as the **production model** because 
 
 ## 📄 **Model Error Analysis**
 
+This section presents a detailed analysis of prediction errors, residual patterns, and how customer age distribution impacts model performance.
+
 #### 📊 **1. Residual Distribution (Diff %)**
 
-<img width="886" height="641" alt="image" src="https://github.com/user-attachments/assets/a1c6438f-4510-4b5d-985f-d0b01cde5e3e" />
+<img width="886" height="641" alt="residual_distribution" src="https://github.com/user-attachments/assets/a1c6438f-4510-4b5d-985f-d0b01cde5e3e" />
 
-This plot shows how much the model’s predictions differ from actual values (in percentage).
+This plot shows how much the model’s predictions differ from the actual values (in percentage).
 
-**Key Insights**
+**What the distribution shows**
 
-Most residuals are tightly centered around 0%, indicating strong predictive accuracy.
+Most residuals are tightly centered around 0%, indicating strong predictive accuracy for the majority of customers.
 
-The distribution is **right-skewed**:
+**The distribution is clearly right-skewed:**
 
-- Large positive errors occur more frequently.
+A long right tail indicates many large positive errors (overprediction).
 
-- The left tail (underpredictions) is minimal.
+The left tail (underprediction) is much smaller.
 
 **Interpretation**
 
-The model overpredicts more often than it underpredicts.
+The model tends to overpredict more frequently than it underpredicts.
 
-A small subset of customers shows very high errors (40–90%), suggesting:
+A small subset of customers exhibits very high errors (40–90%), indicating:
 
-- Their behavior differs from the majority.
+Their premium or behavior patterns differ significantly from the majority.
 
-- Current features do not fully explain their premium patterns.
+The current set of features does not fully capture what influences their values.
 
-#### 📈 **2. Extreme Error Thresholds — 10% vs 40%:**
+These outlier customers form the “extreme error” population seen in later analysis.
 
-**At 10% Threshold**
+#### 📈 **2. Extreme Error Thresholds — 10% vs 40%**
 
-Customers with |error| ≥ 10%: 4,478
+**At a 10% threshold**
 
-This is roughly one-third of the test dataset.
+Customers in the test set with |prediction error| ≥ 10%: 4,478
 
-Indicates a sizable portion with moderate-to-high errors.
+This represents roughly one-third of the X_test samples.
 
-**At 40% Threshold**
+Indicates a sizeable portion of customers with moderate-to-high errors.
 
-Only 300–900 customers remain.
+**At a 40% threshold**
 
-Represents the far-right tail (largest prediction failures).
+Only the most extreme error cases remain.
 
-**Why This Happens**
+Expected count reduces to approximately 300–900 customers.
 
-Most observations fall close to the center (low error).
+**Why this happens**
 
-Only a small minority drives the extreme error tail.
+Most predictions fall near zero error (center peak).
+
+Only a small minority produce very large errors, forming the far-right tail of the residual distribution.
+
+These customers represent the largest prediction failures, tied to demographic imbalance (explained below).
 
 #### 👥 **3. Age Distribution & Its Influence on Errors**
 
 <img width="640" height="480" alt="age_error" src="https://github.com/user-attachments/assets/5cac7dfe-cc93-4e80-bb28-6939f39b296d" />
+What the age histogram shows
 
+- Majority of customers are aged 18–25.
 
-**The age histogram shows:**
+- Very few customers are above 30.
 
-- Most customers are aged 18–25.
+- Ages 40–60 are almost nonexistent.
 
-- Very few are above 30.
+**Impact of age imbalance on error**
 
-- Ages 40–60 are nearly absent.
+The model is trained primarily on younger customers, allowing it to learn patterns well for this group.
 
-**Impact on the model**
+**Older customers are severely underrepresented, leading to:**
 
-The model is trained primarily on young customers, making predictions reliable for this group.
+- Poorer pattern learning, because the model does not have enough examples.
 
-**Older customers are underrepresented, leading to:**
+- Higher prediction errors, since their behavior differs from the training majority.
 
-- Poorer pattern learning
+- More extreme residuals, which explain the long right tail seen earlier.
 
-- Higher prediction errors
+**Key connection**
 
-- More extreme-error cases in the far-right tail
+The extreme errors (40–90%) are primarily linked to customer groups rarely seen in training, especially older age brackets.
 
-### 🧠 **4. Overall Insight**
+## 🧠 **4. Overall Insight**
 
-✔ The model performs strongly for the dominant demographic (18–25 years).
+The model performs very well for the dominant demographic (18–25 years).
 
-✔ Error rates increase significantly for underrepresented groups (30+ years).
+- Error rates rise significantly for underrepresented groups, especially age 30+.
 
-✔ Most extreme errors come from customers the model has rarely seen during training.
+- Most extreme errors come from customers whose behavior the model has not learned due to sparse or missing representation in the dataset.
+
+- Addressing data imbalance (e.g., through segmentation, targeted feature engineering, synthetic sampling) is essential for improving predictions for minority groups.
