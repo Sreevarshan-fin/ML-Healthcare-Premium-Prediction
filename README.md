@@ -56,7 +56,7 @@ I systematically evaluated multiple modeling approaches to find the optimal solu
 - **Tested Linear Regression, Ridge, and XGBoost** on the 15,000-record training set
 - **Discovered XGBoost's superiority** in capturing complex insurance pricing relationships
 - **Tuned key parameters** (max_depth=5, n_estimators=50, learning_rate=0.1)
-- **Selected the best **Tuned XGBoost Randomforest CV**
+- **Selected the best **Tuned XGBoost Random Forest with Cross-Validation**
 - **Achieved 50% error reduction** compared to linear baseline models
 - **Maintained excellent generalization** across all customer segments
 
