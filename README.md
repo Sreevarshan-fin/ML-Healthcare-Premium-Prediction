@@ -88,12 +88,26 @@ This discovery shows the importance of **honest model assessment**. Rather than 
 ### 📁 Project Structure
 ```
 premium_prediction_project/
+
 │
-├── notebooks/          # Complete analysis of 50,000 records
-├── app/               # Streamlit application
-├── models/            # Trained model files
-├── data/              # 50,000 cleaned insurance records
-└── utils/             # Helper functions
+
+├── notebooks/
+
+│   ├── 00_premium_full_analysis.ipynb
+
+│   ├── 01_seg_premium_lt25.ipynb
+
+│   ├── 02_seg_premium_gt25.ipynb
+
+│   ├── 03_seg_genetic_lt25.ipynb
+
+│   └── 04_seg_genetic_gt25.ipynb
+
+│
+
+├── README.md
+
+└── other project files...
 ```
 
 ### 🔧 Technologies I Used
