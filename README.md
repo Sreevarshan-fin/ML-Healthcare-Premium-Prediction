@@ -29,43 +29,67 @@ I built a machine learning system that predicts **annual health insurance premiu
 
 ## 🧠 My Problem-Solving Journey
 
-### 🔍 Discovering the Data Challenges
-When I first opened the **50,000-record insurance dataset**, I found entries that made no sense – customers listed as **356 years old** with incomes of **900 lakhs**. Instead of applying generic data cleaning, I approached it like an insurance analyst:
+### 🔍 Phase 1: Data Discovery & Initial Analysis
+When I first explored the **50,000-record insurance dataset**, I encountered critical data quality issues that required domain-specific cleaning:
 
-**What I did:**
-- **Cleaned 50,000 records** by removing biologically impossible values (ages > 100)
-- **Preserved legitimate high-income clients** while capping extreme outliers across the full dataset
-- **Applied quantile-based capping** to maintain realistic data distributions at scale
+**My Data Foundation Work:**
+- **Analyzed 50,000 customer records** to understand data patterns and quality issues
+- **Removed biologically impossible values** (ages > 100, impossible medical entries)
+- **Preserved legitimate high-income clients** while capping statistical outliers
+- **Applied quantile-based capping** to maintain realistic data distributions
+- **Selected 15,000 high-quality records** for robust model training
 
----
+### 🛠️ Phase 2: Intelligent Feature Engineering
+The medical history data across all customers was unstructured text that needed transformation into actionable features.
 
-### 🛠️ Engineering Smarter Features
-The medical history data across **50,000 customers** was messy and unstructured – just raw text about conditions like diabetes, heart disease, and thyroid issues. 
+**My Custom Health Risk Score Development:**
+- **Researched medical and insurance literature** to understand condition impacts
+- **Developed weighted scoring system** based on treatment costs and prevalence data
+- **Transformed complex medical text** into a standardized 0-1 numerical scale
+- **Iteratively tested weighting approaches** to maximize predictive power
+- **Validated scoring methodology** against actual premium patterns in the data
 
-**My solution:** I created a **custom Health Risk Score** that:
-- **Researched medical literature** to understand how different conditions affect insurance risk
-- **Developed a weighted scoring system** based on condition prevalence and typical treatment costs
-- **Validated my approach** by comparing risk scores against actual premium patterns in the data
-- **Transformed complex medical text** into a single 0-1 numerical scale the model could understand
-- **Tested multiple weighting approaches** to find the most predictive combination
+### 🤖 Phase 3: Algorithm Selection & Optimization
+I systematically evaluated multiple modeling approaches to find the optimal solution.
 
----
+**My Modeling Breakthrough:**
+- **Tested Linear Regression, Ridge, and XGBoost** on the 15,000-record training set
+- **Discovered XGBoost's superiority** in capturing complex insurance pricing relationships
+- **Tuned key parameters** (max_depth=5, n_estimators=50, learning_rate=0.1)
+- **Achieved 50% error reduction** compared to linear baseline models
+- **Maintained excellent generalization** across all customer segments
 
-### 🤖 Finding the Right Algorithm
-I tested multiple approaches on the **15,000-record dataset** and discovered a key insight: simple linear models couldn't capture the complex, non-linear relationships in insurance pricing.
+### 🎯 Phase 4: Solving the Business Requirement Gap
+My initial success revealed a critical business alignment issue that required deeper analysis.
 
-**The breakthrough came** when I tuned XGBoost's parameters (max_depth=5, n_estimators=50, learning_rate=0.1) on the full dataset, boosting accuracy from 93% to 98% while maintaining excellent generalization across all 50,000 records.
+**The Critical Insight:**
+- Despite 98% overall accuracy, **residual errors reached 30%** for specific customer groups
+- **Business requirement demanded <10% maximum error** for all predictions
+- Error analysis revealed **age-based segmentation patterns** in prediction accuracy
 
----
+**My Iterative Solution Development:**
 
-### 👥 Building for Real Users
-I didn't stop at model building – I deployed a **Streamlit web application** that makes these advanced predictions trained on **50,000 records** accessible to insurance professionals and customers. 
+**First Attempt: Age-Based Segmentation**
+- Built **`01_seg_premium_lt25.ipynb`** for young adults (18-25) with early-life risk focus
+- Built **`02_seg_premium_gt25.ipynb`** for mature customers (25+) with established health patterns
+- **Result**: Improved accuracy but still above the 10% error threshold
 
-**To ensure real-world usability:**
-- **Conducted feedback sessions with 3 insurance professionals** to refine the interface
-- **Presented model results trained on 50,000 records** to domain experts and incorporated their feedback
-- **Ran user testing with potential customers** to ensure intuitive design
-- Their collective input helped shape the final presentation to match industry standards
+**Breakthrough: Genetic Risk Intelligence**
+- **Researched and developed Genetic Risk Score** capturing inherited health predispositions
+- Created **`03_seg_genetic_lt25.ipynb`**: Young adults with genetic risk awareness
+- Created **`04_seg_genetic_gt25.ipynb`**: Mature customers with genetic context
+- **✅ Final Outcome**: **Achieved <10% maximum error** while improving to 99.2% accuracy
+
+### 👥 Phase 5: Real-World Application Development
+I transformed the analytical work into a practical business tool through user-centered design.
+
+**My Deployment Strategy:**
+- **Built Streamlit web application** for instant premium predictions
+- **Conducted feedback sessions** with insurance professionals to refine the interface
+- **Ran user testing** with potential customers to ensure intuitive design
+- **Incorporated domain expert input** to match industry terminology and workflows
+- **Optimized for performance** to deliver sub-second prediction times
+
 
 
 ## 📈 Model Error Analysis: Honest Assessment
