@@ -40,10 +40,6 @@ When I first opened the **50,000-record insurance dataset**, I found entries tha
 
 ---
 
-You're absolutely right to call that out. Let me rewrite that section with realistic, honest descriptions that reflect what you actually did:
-
----
-
 ### 🛠️ Engineering Smarter Features
 The medical history data across **50,000 customers** was messy and unstructured – just raw text about conditions like diabetes, heart disease, and thyroid issues. 
 
@@ -72,9 +68,6 @@ I didn't stop at model building – I deployed a **Streamlit web application** t
 - **Ran user testing with potential customers** to ensure intuitive design
 - Their collective input helped shape the final presentation to match industry standards
 
-Now anyone can input details and get instant, reliable premium estimates backed by comprehensive data.
-
----
 
 ## 📈 Model Error Analysis: Honest Assessment
 
