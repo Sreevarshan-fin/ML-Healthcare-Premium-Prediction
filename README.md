@@ -39,15 +39,15 @@
 ```
 premium_prediction_project/
 │
-├── notebooks/                                  **All project notebooks: full analysis, segmentation, and experiments**
-│   ├── 00_premium_full_analysis.ipynb   --->   **Complete EDA, preprocessing, modelling, tuning, and final evaluation**
-│   ├── 01_seg_premium_lt25.ipynb        --->   **Segmentation analysis for customers with premium < 25**
-│   ├── 02_seg_premium_gt25.ipynb        --->   **Segmentation analysis for customers with premium > 25**
-│   ├── 03_seg_genetic_lt25.ipynb        --->   **Segmentation using genetic risk score for premium_gr < 25**
-│   └── 04_seg_genetic_gt25.ipynb        --->   **Segmentation using genetic risk score for premium_gr > 25**
+├── notebooks/                                  All project notebooks: full analysis, segmentation, and experiments
+│   ├── 00_premium_full_analysis.ipynb   --->   Complete EDA, preprocessing, modelling, tuning, and final evaluation
+│   ├── 01_seg_premium_lt25.ipynb        --->   Segmentation analysis for customers with premium < 25
+│   ├── 02_seg_premium_gt25.ipynb        --->   Segmentation analysis for customers with premium > 25
+│   ├── 03_seg_genetic_lt25.ipynb        --->   Segmentation using genetic risk score for premium_gr < 25
+│   └── 04_seg_genetic_gt25.ipynb        --->   Segmentation using genetic risk score for premium_gr > 25
 │
-├── README.md                        # Main project documentation and explanation
-└── other project files…             # Streamlit app, model files, data, utilities, and supporting scripts
+├── README.md                         Main project documentation and explanation
+└── other project files…              Streamlit app, model files, data, utilities, and supporting scripts
 
 ```
 
