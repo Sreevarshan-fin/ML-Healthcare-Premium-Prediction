@@ -263,11 +263,4 @@ Extreme errors come from a **very small subset**.
 
 ---
 
-If you'd like, I can also prepare:
 
-⭐ A LinkedIn project announcement
-⭐ Resume bullet points
-⭐ Portfolio-friendly summary
-⭐ One-page PDF report
-
-Just tell me!
