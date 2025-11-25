@@ -39,15 +39,16 @@
 ```
 premium_prediction_project/
 │
-├── notebooks/
-│   ├── 00_premium_full_analysis.ipynb
-│   ├── 01_seg_premium_lt25.ipynb
-│   ├── 02_seg_premium_gt25.ipynb
-│   ├── 03_seg_genetic_lt25.ipynb
-│   └── 04_seg_genetic_gt25.ipynb
+├── notebooks/                      # All project notebooks: full analysis, segmentation, and experiments
+│   ├── 00_premium_full_analysis.ipynb     # Complete EDA, preprocessing, modelling, tuning, and final evaluation
+│   ├── 01_seg_premium_lt25.ipynb          # Segmentation analysis for customers with premium < 25
+│   ├── 02_seg_premium_gt25.ipynb          # Segmentation analysis for customers with premium > 25
+│   ├── 03_seg_genetic_lt25.ipynb          # Segmentation using genetic risk score for premium_gr < 25
+│   └── 04_seg_genetic_gt25.ipynb          # Segmentation using genetic risk score for premium_gr > 25
 │
-├── README.md
-└── other project files…
+├── README.md                        # Main project documentation and explanation
+└── other project files…             # Streamlit app, model files, data, utilities, and supporting scripts
+
 ```
 
 Each notebook focuses on a **different experiment**, making it extremely easy to reviewers and follow your workflow.
@@ -158,7 +159,7 @@ Performed:
 ### ✂️ **Outlier Treatment**
 
 * **Age:** removed unrealistic values (e.g., above 100 years)
-* **Income:** right-skewed → handled using **quantile capping**, not removal
+* **Income:** right-skewed → handled using **quantile capping**
 
 This ensured pattern integrity without losing valid high-income behavior.
 
