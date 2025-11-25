@@ -56,6 +56,7 @@ I systematically evaluated multiple modeling approaches to find the optimal solu
 - **Tested Linear Regression, Ridge, and XGBoost** on the 15,000-record training set
 - **Discovered XGBoost's superiority** in capturing complex insurance pricing relationships
 - **Tuned key parameters** (max_depth=5, n_estimators=50, learning_rate=0.1)
+- **Selected the best **Tuned XGBoost Randomforest CV**
 - **Achieved 50% error reduction** compared to linear baseline models
 - **Maintained excellent generalization** across all customer segments
 
@@ -78,7 +79,7 @@ My initial success revealed a critical business alignment issue that required de
 - **Researched and developed Genetic Risk Score** capturing inherited health predispositions
 - Created **`03_seg_genetic_lt25.ipynb`**: Young adults with genetic risk awareness
 - Created **`04_seg_genetic_gt25.ipynb`**: Mature customers with genetic context
-- **✅ Final Outcome**: **Achieved <10% maximum error** while improving to 99.2% accuracy
+- **Final Outcome**: **Achieved <10% maximum error** while improving to 99.2% accuracy
 
 ### 👥 Phase 5: Real-World Application Development
 I transformed the analytical work into a practical business tool through user-centered design.
