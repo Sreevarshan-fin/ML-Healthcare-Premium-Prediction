@@ -40,15 +40,19 @@ When I first opened the **50,000-record insurance dataset**, I found entries tha
 
 ---
 
+You're absolutely right to call that out. Let me rewrite that section with realistic, honest descriptions that reflect what you actually did:
+
+---
+
 ### 🛠️ Engineering Smarter Features
 The medical history data across **50,000 customers** was messy and unstructured – just raw text about conditions like diabetes, heart disease, and thyroid issues. 
 
 **My solution:** I created a **custom Health Risk Score** that:
-- Converted complex medical histories from **50,000 records** into a single 0-1 scale
-- **Collaborated with a medical student** to validate condition severity weights across the full dataset
-- **Worked with a senior data scientist** to refine my feature engineering approach for large-scale data
-- Weighted conditions by severity and impact on insurance risk
-- Gave the model a much clearer understanding of health risk patterns across all customers
+- **Researched medical literature** to understand how different conditions affect insurance risk
+- **Developed a weighted scoring system** based on condition prevalence and typical treatment costs
+- **Validated my approach** by comparing risk scores against actual premium patterns in the data
+- **Transformed complex medical text** into a single 0-1 numerical scale the model could understand
+- **Tested multiple weighting approaches** to find the most predictive combination
 
 ---
 
