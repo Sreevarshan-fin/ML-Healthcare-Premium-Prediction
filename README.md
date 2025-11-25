@@ -9,7 +9,7 @@ A machine learning system designed to predict **annual health insurance premiums
 **[▶ Launch Streamlit App](https://ml-healthcare-premium-prediction-7qrpw78zqct4zhdm7u8v2d.streamlit.app/)**
 
 ---
-## 📝 **2) Scope of Work (SOW)**
+## 📝 **2) Project Goals & Approach**
 
 ### 🎯 **Objectives**
 
@@ -51,38 +51,6 @@ A machine learning system designed to predict **annual health insurance premiums
 
    * Prepare full technical documentation
    * Provide user instructions for underwriters
-
-### 📦 **Deliverables**
-
-* ✔ Trained and validated ML model
-* ✔ Cloud-deployed prediction app
-* ✔ Interactive Streamlit user interface
-* ✔ Complete project documentation
-
-### ⏱ **Timeline**
-
-| Task                       | Time    |
-| -------------------------- | ------- |
-| Data Preparation           | 2 weeks |
-| Model Development & Tuning | 4 weeks |
-| Deployment & App Building  | 3 weeks |
-| Testing & Documentation    | 2 weeks |
-
----
-
-## 🧠 **3) Problem Understanding**
-
-Health insurance pricing depends heavily on **age, medical risk, lifestyle, and demographic factors**. Traditional pricing methods can be inconsistent and slow.
-
-This project builds a **data-driven premium prediction model** to solve these challenges by:
-
-* Achieving **>97% accuracy (R²)**
-* Keeping prediction error within **±10%**
-* Ensuring the model is **scalable, interpretable, and deployable**
-* Supporting **real-time underwriting** through a Streamlit interface
-
-The outcome is a system that delivers **consistent, transparent, and efficient premium estimates**, improving both customer experience and underwriting accuracy.
-
 ---
 
 ## 📌 **Project Highlights**
@@ -187,18 +155,12 @@ Why XGBoost was selected:
 * Robust to skewed distributions
 * Excellent generalization (train ≈ test performance)
 
----
-
-Here is the **human-friendly, simple, clean version** of your 8 bullet points — still professional, but easier to read and more natural:
-
-
 
 ---
 
 
 
 # 📄 **Model Error Analysis**
-
 
 
 * Most predictions are very close to the real premium values, with errors centered around 0%.
