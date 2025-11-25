@@ -11,12 +11,17 @@ I built a machine learning system that predicts **annual health insurance premiu
 
 ## 🎯 What I Delivered
 
-- **98.1% accuracy** (R² = 0.981) – outperforming baseline models by 50%
-- **Production-ready web application** built with Streamlit
-- **Custom Health Risk Score** that quantifies medical complexity
-- **95% of predictions** within 10% of actual premiums
-- **Analyzed 50,000** insurance records and **trained on 15,000** high-quality samples
+* **98.1% model accuracy** (R² = 0.981) with **50% lower error** than baseline
+* **Processed 50,000+ records** and curated **15,000 high-quality samples** for training
+* Engineered a **custom Health Risk Score** to quantify medical complexity
+* Built **4 specialized models** (age-based + genetic-risk segmentation)
+* Achieved **<10% error** across all segments using advanced feature engineering
+* Developed and deployed a **production-ready Streamlit web application**
+* Delivered **95%+ predictions within 10% deviation** from actual premiums
+* Ensured real-world usability by incorporating **domain expert and user feedback**
+
 ---
+
 
 ## 📊 The Results Speak for Themselves
 
