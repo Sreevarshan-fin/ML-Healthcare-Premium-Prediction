@@ -23,8 +23,8 @@ I built a machine learning system that predicts **annual health insurance premiu
 
 | Model | R² Score | RMSE | Improvement | Training Data |
 |-------|----------|------|-------------|---------------|
-| Linear Regression | 0.928 | 2,273 | Baseline | 50,000 records |
-| **XGBoost (My Model)** | **0.981** | **1,163** | **50% error reduction** | **50,000 records** |
+| Linear Regression | 0.928 | 2,273 | Baseline | 15000 records |
+| **XGBoost (My Model)** | **0.981** | **1,163** | **50% error reduction** | **15,000 records** |
 
 ---
 
