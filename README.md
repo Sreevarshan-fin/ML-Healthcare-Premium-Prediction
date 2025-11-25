@@ -9,6 +9,20 @@ A machine learning system designed to predict **annual health insurance premiums
 **[▶ Launch Streamlit App](https://ml-healthcare-premium-prediction-7qrpw78zqct4zhdm7u8v2d.streamlit.app/)**
 
 ---
+
+
+## 📘 **1) Problem Overview**
+
+Insurance pricing varies significantly based on individual risk factors such as age, lifestyle, and medical history. Manually estimating premiums can be inconsistent and time-consuming.
+
+This project builds a **data-driven premium prediction model** that:
+
+* Provides consistent and accurate premium estimates
+* Handles complex non-linear relationships
+* Is deployable and easy to use via a web interface
+
+---
+
 ## 📝 **2) Project Goals & Approach**
 
 ### 🎯 **Objectives**
@@ -101,17 +115,6 @@ premium_prediction_project/
 
 ---
 
-## 📘 **1) Problem Overview**
-
-Insurance pricing varies significantly based on individual risk factors such as age, lifestyle, and medical history. Manually estimating premiums can be inconsistent and time-consuming.
-
-This project builds a **data-driven premium prediction model** that:
-
-* Provides consistent and accurate premium estimates
-* Handles complex non-linear relationships
-* Is deployable and easy to use via a web interface
-
----
 
 ## 🧹 **2) Data Preparation**
 
