@@ -15,8 +15,7 @@ I built a machine learning system that predicts **annual health insurance premiu
 - **Production-ready web application** built with Streamlit
 - **Custom Health Risk Score** that quantifies medical complexity
 - **95% of predictions** within 10% of actual premiums
-- **Trained on 50,000+ insurance records** with comprehensive customer profiles
-
+- **Analyzed 50,000** insurance records and **trained on 15,000** high-quality samples
 ---
 
 ## 📊 The Results Speak for Themselves
@@ -53,7 +52,7 @@ The medical history data across **50,000 customers** was messy and unstructured 
 ---
 
 ### 🤖 Finding the Right Algorithm
-I tested multiple approaches on the **50,000-record dataset** and discovered a key insight: simple linear models couldn't capture the complex, non-linear relationships in insurance pricing.
+I tested multiple approaches on the **15,000-record dataset** and discovered a key insight: simple linear models couldn't capture the complex, non-linear relationships in insurance pricing.
 
 **The breakthrough came** when I tuned XGBoost's parameters (max_depth=5, n_estimators=50, learning_rate=0.1) on the full dataset, boosting accuracy from 93% to 98% while maintaining excellent generalization across all 50,000 records.
 
@@ -105,12 +104,14 @@ premium_prediction_project/
 - **Version Control** (Git, GitHub)
 
 ### 📊 Dataset Scale
-- **50,000 insurance records** with 15+ features each
-- **Comprehensive customer profiles** including demographics, medical history, and lifestyle factors
-- **Real-world insurance premium data** spanning multiple age groups and risk categories
+- **50,000 insurance records analyzed** for comprehensive insights
 
----
+- **15,000 high-quality record**s used for model training
 
+- Comprehensive customer profiles including demographics, medical history, and lifestyle factors
+
+- Real-world insurance premium data spanning multiple age groups and risk categories
+- 
 ## 💡 Business Impact
 
 This project delivers real-world value:
