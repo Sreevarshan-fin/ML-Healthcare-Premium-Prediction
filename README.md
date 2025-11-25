@@ -9,6 +9,81 @@ A machine learning system designed to predict **annual health insurance premiums
 **[▶ Launch Streamlit App](https://ml-healthcare-premium-prediction-7qrpw78zqct4zhdm7u8v2d.streamlit.app/)**
 
 ---
+## 📝 **2) Scope of Work (SOW)**
+
+### 🎯 **Objectives**
+
+* Build a **high-accuracy premium prediction model** (R² > 0.97)
+* Maintain prediction error within **±10% for at least 95%** of users
+* Deploy the trained model on the cloud for **scalable access**
+* Develop an interactive **Streamlit app** for real-time premium estimation
+
+### 📌 **Project Scope**
+
+1. **Data Collection & Preprocessing**
+
+   * Clean and validate insurance premium datasets
+   * Handle missing values, outliers, and categorical encodings
+   * Perform detailed EDA to understand trends and patterns
+
+2. **Model Development**
+
+   * Train multiple algorithms (Linear Regression, Ridge, XGBoost)
+   * Compare models based on R², RMSE, and residual behavior
+   * Tune the best-performing model
+
+3. **Model Deployment**
+
+   * Deploy using **Streamlit Cloud**
+   * Enable secure, scalable access to predictions
+
+4. **Streamlit App Development**
+
+   * Build an interactive UI for user data input
+   * Display predictions and relevant visual insights
+
+5. **Testing & Validation**
+
+   * Validate model performance on real-world and test datasets
+   * Conduct usability testing for speed and accuracy
+
+6. **Documentation**
+
+   * Prepare full technical documentation
+   * Provide user instructions for underwriters
+
+### 📦 **Deliverables**
+
+* ✔ Trained and validated ML model
+* ✔ Cloud-deployed prediction app
+* ✔ Interactive Streamlit user interface
+* ✔ Complete project documentation
+
+### ⏱ **Timeline**
+
+| Task                       | Time    |
+| -------------------------- | ------- |
+| Data Preparation           | 2 weeks |
+| Model Development & Tuning | 4 weeks |
+| Deployment & App Building  | 3 weeks |
+| Testing & Documentation    | 2 weeks |
+
+---
+
+## 🧠 **3) Problem Understanding**
+
+Health insurance pricing depends heavily on **age, medical risk, lifestyle, and demographic factors**. Traditional pricing methods can be inconsistent and slow.
+
+This project builds a **data-driven premium prediction model** to solve these challenges by:
+
+* Achieving **>97% accuracy (R²)**
+* Keeping prediction error within **±10%**
+* Ensuring the model is **scalable, interpretable, and deployable**
+* Supporting **real-time underwriting** through a Streamlit interface
+
+The outcome is a system that delivers **consistent, transparent, and efficient premium estimates**, improving both customer experience and underwriting accuracy.
+
+---
 
 ## 📌 **Project Highlights**
 
