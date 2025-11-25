@@ -142,7 +142,7 @@ premium_prediction_project/
 - Comprehensive customer profiles including demographics, medical history, and lifestyle factors
 
 - Real-world insurance premium data spanning multiple age groups and risk categories
-- 
+  
 ## 💡 Business Impact
 
 This project delivers real-world value:
