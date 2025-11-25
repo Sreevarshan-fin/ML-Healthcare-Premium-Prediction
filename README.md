@@ -56,7 +56,7 @@ I systematically evaluated multiple modeling approaches to find the optimal solu
 - **Tested Linear Regression, Ridge, and XGBoost** on the 15,000-record training set
 - **Discovered XGBoost's superiority** in capturing complex insurance pricing relationships
 - **Tuned key parameters** (max_depth=5, n_estimators=50, learning_rate=0.1)
-- **Selected the best **Tuned XGBoost Random Forest with Cross-Validation**
+- **Selected XGBoost with Random Search CV** for optimal hyperparameter tuning
 - **Achieved 50% error reduction** compared to linear baseline models
 - **Maintained excellent generalization** across all customer segments
 
@@ -177,11 +177,11 @@ Experience how insurance pricing can be both accurate and accessible. The app de
 
 ## 🌟 Why This Project Matters
 
-This isn't just about technical metrics – it's about **building solutions that work for real people at scale**. By collaborating with medical experts, insurance professionals, and end-users, and training on **50,000 comprehensive records**, I created something that's not just accurate, but actually useful in the real world with proven scalability.
+This project demonstrates my ability to transform complex data into practical business solutions. From messy insurance data to deployed specialized models, I've shown how machine learning can drive real value when aligned with business requirements.
 
-**Built with attention to both technical excellence and practical utility** – because better insurance pricing should be both accurate and accessible, backed by substantial data.
+**Built to solve real insurance pricing challenges** - delivering both technical excellence and practical business utility through specialized, requirement-driven machine learning solutions.
 
-
+⭐ **If this approach to solving complex business problems with data science resonates with your needs, I'd welcome the opportunity to discuss how I can deliver similar results for your organization.**
 
 ---
 
