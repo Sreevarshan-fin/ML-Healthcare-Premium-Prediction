@@ -194,4 +194,4 @@ Why XGBoost was selected:
 * Residuals concentrated near **0% error**, indicating strong accuracy
 * Slight right-skew → occasional overprediction
 * High-error customers (40%+) are rare and occur mostly in **underrepresented age groups**
-* Majority of the dataset is **ages 18–25**, creating an imbalance
+* Majority of the dataset is **ages 18–25**
