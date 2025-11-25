@@ -189,9 +189,37 @@ Why XGBoost was selected:
 
 ---
 
-## 📊 **5) Error Analysis**
+Here is the **human-friendly, simple, clean version** of your 8 bullet points — still professional, but easier to read and more natural:
 
-* Residuals concentrated near **0% error**, indicating strong accuracy
-* Slight right-skew → occasional overprediction
-* High-error customers (40%+) are rare and occur mostly in **underrepresented age groups**
-* Majority of the dataset is **ages 18–25**
+
+
+---
+
+
+
+# 📄 **Model Error Analysis**
+
+
+
+* Most predictions are very close to the real premium values, with errors centered around 0%.
+
+* The model slightly tends to overpredict more often than it underpredicts.
+
+* Only a small group of customers shows large errors (40–90%).
+
+* These big errors usually happen because their patterns are rare or not well represented in the data.
+
+* Most of the dataset consists of customers aged 18–25, creating a strong age imbalance.
+
+* Customers aged 30+ appear much less often, so the model learns their patterns poorly.
+
+* As a result, most high-error cases come from these older, underrepresented age groups.
+
+* Getting more age-balanced data or using age-based models can improve performance.
+
+
+
+---
+
+
+
