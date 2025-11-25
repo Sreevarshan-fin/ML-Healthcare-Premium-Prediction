@@ -13,7 +13,7 @@
 ### ✨ **Highlights**
 
 * Created a **custom Health Risk Score** (0–1) from medical history to improve premium prediction.
-* Applied **context-driven outlier treatment** (IQR + quantile capping) for age and income.
+* Applied **context-driven outlier treatment** (Using IQR and quantile capping) , age and income.
 * Reduced multicollinearity using **Correlation Heatmap + VIF** analysis.
 * Compared multiple models — **Linear Regression**, **Ridge Regression**, **XGBoost**.
 * Selected a **tuned XGBoost model** delivering:
@@ -219,7 +219,7 @@ Applied **Min-Max Scaling** to numerical features to:
 
 ---
 
-# 🤖 **8) Model Evaluation (Recruiter-Friendly Summary)**
+# 🤖 **8) Model Evaluation**
 
 ### **Model Comparison**
 
@@ -240,7 +240,7 @@ Applied **Min-Max Scaling** to numerical features to:
 
 ---
 
-# 📄 **9) Model Error Analysis (Short & Clear)**
+# 📄 **9) Model Error Analysis**
 
 ### 📊 Residual Insights
 
@@ -261,15 +261,6 @@ To improve performance for older customers, **more balanced data** is required.
 
 ---
 
-# ✔ Final Notes (Recruiter-Friendly)
-
-This project demonstrates:
-
-* Strong **data cleaning** and **feature engineering** skills
-* Ability to handle **real-world ML challenges** such as outliers, skew, and multicollinearity
-* Solid understanding of **regression modelling** and **model evaluation**
-* Deployment of a **full ML application** using Streamlit
-* Capability to communicate insights clearly for **business stakeholders**
 
 ---
 
