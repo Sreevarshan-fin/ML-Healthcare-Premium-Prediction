@@ -113,26 +113,18 @@ This discovery shows the importance of **honest model assessment**. Rather than 
 ### 📁 Project Structure
 ```
 premium_prediction_project/
-
 │
-
 ├── notebooks/
-
-│   ├── 00_premium_full_analysis.ipynb
-
-│   ├── 01_seg_premium_lt25.ipynb
-
-│   ├── 02_seg_premium_gt25.ipynb
-
-│   ├── 03_seg_genetic_lt25.ipynb
-
-│   └── 04_seg_genetic_gt25.ipynb
-
+│   ├── 00_premium_full_analysis.ipynb     # Comprehensive initial analysis
+│   ├── 01_seg_premium_lt25.ipynb          # Age segmentation attempt 18 < 25
+│   ├── 02_seg_premium_lt25.ipynb          # Age segmentation attempt    > 25
+│   ├── 03_seg_genetic_lt25.ipynb          # ✅ Final young demographic model
+│   └── 04_seg_genetic_gt25.ipynb          # ✅ Final mature demographic model
 │
-
-├── README.md
-
-└── other project files...
+├── app/               # Production Streamlit application
+├── models/            # Deployed specialized models
+├── data/              # 50,000 analyzed records (15,000 trained)
+└── utils/             # Helper functions and utilities
 ```
 
 ### 🔧 Technologies I Used
