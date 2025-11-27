@@ -1,3 +1,142 @@
+
+# 🏥 Health Insurance Premium Prediction
+
+I built a machine learning system that predicts health insurance premiums with **99% accuracy**. Starting with 50,000 messy insurance records, I cleaned the data, engineered custom risk features, and deployed 4 specialized models that keep errors under 10% across all customer groups.
+
+## Achievements 
+- Achieved **R² = 0.99** and ~50% RMSE reduction after tuning XGBoost with RandomizedSearchCV.
+- Reduced residual error to **<10%** across all customer groups using age segmentation + Genetic Risk Score.
+- Processed **50,000+ records**, selected **15,000 clean samples**, and applied encoding, scaling, and VIF-based feature selection.
+- Built and deployed a Streamlit app with real-time predictions and domain-expert-driven UI improvements.
+
+## What I Delivered
+- **99% model accuracy** (R² = 0.99) — reduced prediction error by almost 50% compared to baseline models.
+- Processed 50,000+ insurance records and used a **30% test split** for reliable evaluation.
+- Performed key feature engineering steps including encoding, scaling, and VIF-based feature selection.
+- Built 4 specialized models using a combination of age segmentation and genetic-risk scoring.
+- Achieved under 10% residual error across all customer groups.
+- Developed and deployed a Streamlit web app for real-time premium predictions.
+- Improved usability by working closely with insurance domain experts and running user testing sessions.
+
+---
+
+## Results
+**Based on Streamlit testing**
+
+### Test 1 — Customer Under 25  
+**Metric** | **Value**  
+---|---  
+Actual Premium | ₹13,365  
+Predicted Premium | ₹13,615  
+Absolute Error | ₹250  
+Error % | 1.87%
+
+**Interpretation:**  
+- This customer falls in the under-25 group, where predictions were originally less reliable. After adding the Genetic Risk Score, the model became far more accurate. A 1.87% error is well within the business requirement of <10%.
+
+**Segment Insight:**  
+- Only **2.49%** of customers in this group had errors above 10% → **97.51%** accurate after the Genetic Risk Score.
+
+---
+
+### Test 2 — Customer Above 25  
+**Metric** | **Value**  
+---|---  
+Actual Premium | ₹16,339  
+Predicted Premium | ₹16,034  
+Absolute Error | ₹305  
+Error % | 1.86%
+
+**Interpretation:**  
+- For the 25+ group the model already performed well without additional engineered features. A 1.86% error shows stable, reliable predictions.
+
+**Segment Insight:**  
+- Only **0.3%** of customers in this group had errors above 10% → **99.7%** accurate for customers aged 25+.
+
+---
+
+## Overall Summary
+- Both age groups meet the **<10%** error requirement.
+- The **Genetic Risk Score** significantly improved accuracy for the under-25 group.
+- The 25+ group remained highly accurate with minimal tuning.
+- The two real examples show prediction errors ~**1.8%**, demonstrating real-world reliability.
+
+---
+
+## How I Built It — My Problem-Solving Journey
+
+### Phase 1: Understanding & Cleaning the Data
+When I opened the dataset of **50,000** insurance records, I found:
+- Ages above 100
+- Repeated or unrealistic medical history
+- Extremely high income values
+- Missing or inconsistent entries
+
+What I did:
+- Reviewed all 50,000 records to understand overall quality
+- Removed impossible values (e.g., age > 100)
+- Kept genuine high-income customers but capped extreme outliers
+- Used quantile capping to make the data more realistic
+- Selected **15,000** clean and usable records for modeling
+
+### Phase 2: Feature Engineering (medium)
+The medical history column was plain text (e.g., “diabetes, high BP”). I:
+- Used **Label Encoding** and **One-Hot Encoding** for categorical columns
+- Applied **VIF** (Variance Inflation Factor) to remove highly correlated features
+- Created a **Health Risk Score** by assigning weights to medical conditions and converting text to a 0–1 value
+- Tuned weights and validated impact on model accuracy
+
+### Phase 3: Selecting the Right Model
+Tested:
+- Linear Regression
+- Ridge Regression
+- **XGBoost** (best)
+
+Final XGBoost params:
+- `max_depth = 5`  
+- `n_estimators = 50`  
+- `learning_rate = 0.1`
+
+Using **RandomizedSearchCV**:
+- RMSE dropped by ~50%
+- Model became more stable and generalized well
+
+### Phase 4: Meeting the Business Requirement
+Business requirement: **<10% prediction error**  
+Findings:
+- Some customers had errors up to 30%, mostly in ages **18–25** (data imbalance).
+Solutions:
+1. **Age-Based Segmentation** (<25 and ≥25) — improved accuracy but still needed work for younger group.
+2. **Genetic Risk Segmentation** — added genetic/hereditary risk feature and achieved **<10% error** across all groups.
+Result: overall accuracy ≈ **99.1%**.
+
+### Phase 5: Making the Solution Usable
+- Built a Streamlit web app for easy usage
+- Collected and applied feedback from insurance professionals
+- Simplified UI terminology for non-technical users
+- Optimized backend for sub-second predictions
+
+---
+
+## Model Error Analysis
+- **95%** of predictions are within **10%** error
+- Larger errors were concentrated in underrepresented groups (younger ages)
+- Age segmentation + Genetic Risk Score fixed the imbalance
+- Both segments now meet business requirements
+
+---
+
+## Project Structure
+
+
+
+
+
+-----------------------------------------------------
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+------------------------------------------------------------
 # 🏥 Health Insurance Premium Prediction
 
 ## 👋 From Raw Data to Real Impact
