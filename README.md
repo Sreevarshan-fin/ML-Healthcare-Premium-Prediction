@@ -3,9 +3,19 @@
 # 🏥 **Health Insurance Premium Prediction**
 
 
-I built a machine learning system that predicts health insurance premiums with **99% accuracy**. 
+I built a machine learning system that predicts health insurance premiums with 99% accuracy.
 
-When I started this project, my goal was simple: build something that actually works in a real insurance workflow, not just a model with a high score. The project started with **50,000 raw insurance records**, and I handled everything—from cleaning messy data to deploying a working Streamlit app that real users can interact with.
+**Problem Statement:**  
+Insurance companies need to estimate fair and accurate premiums for customers based on their health profiles. This is a **supervised regression problem**—the model predicts continuous premium values (in ₹) rather than categories.
+
+**Scope of Work:**
+- **Input features:** Age, BMI, medical history, lifestyle factors, income, family size, hereditary risk
+- **Target variable:** Annual insurance premium (continuous numerical value)
+- **Business constraint:** Prediction error must be <10% for all customer segments
+- **Deliverable:** A deployed web application that insurance teams can use for real-time premium estimation
+
+**My Approach:**  
+When I started this project, my goal was simple: build something that actually works in a real insurance workflow, not just a model with a high score. The project started with 50,000 raw insurance records, and I handled everything—from cleaning messy data to deploying a working Streamlit app that real users can interact with.
 
 ---
 
