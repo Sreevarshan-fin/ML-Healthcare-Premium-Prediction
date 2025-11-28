@@ -31,9 +31,7 @@ When I started this project, my goal was simple: build something that actually w
 
 -------------------
 
-##  **Project Structure**
-
-## 📂 Project Structure
+##   📂 **Project Structure**
 
 ```
 Heathcare Premium_Prediction_Project/
