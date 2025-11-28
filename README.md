@@ -33,7 +33,7 @@ When I started this project, my goal was simple: build something that actually w
 
 ##  **Results (Based on Streamlit Testing)**
 
-### **Test 1 — Customer Under 25**
+#### **Test 1 — Customer Under 25**
 
 | Metric                | Value     |
 | --------------------- | --------- |
@@ -53,7 +53,7 @@ Only **2.49%** of young customers exceeded the 10% error threshold—meaning **9
 
 
 
-### **Test 2 — Customer Above 25**
+#### **Test 2 — Customer Above 25**
 
 | Metric                | Value     |
 | --------------------- | --------- |
@@ -69,9 +69,8 @@ Predictions were stable and reliable.
 **Segment Performance:**  
 Only **0.3%** exceeded the 10% threshold—meaning **99.7%** were accurate. No additional segmentation was needed for this group.
 
----
 
-### **Overall Summary**
+#### **Overall Summary**
 
 * Both age groups meet the **<10% business requirement**
 * The Genetic Risk Score improved under-25 accuracy dramatically, while the 25+ group was already stable
@@ -81,7 +80,7 @@ Only **0.3%** exceeded the 10% threshold—meaning **99.7%** were accurate. No a
 # **How I Built This**
 
 
-### **The Challenge**
+#### **The Challenge**
 
 Insurance premiums depend on factors like age, medical history, lifestyle, and hereditary risks. The dataset had quality issues, and different age groups behaved completely differently—making accurate prediction tricky.
 
@@ -264,3 +263,6 @@ Going forward, I will continue focusing on ML systems that are accurate, interpr
 
 
 ----------------------
+
+
+
