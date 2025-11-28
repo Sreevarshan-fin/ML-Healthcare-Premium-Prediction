@@ -23,12 +23,29 @@ When I started this project, my goal was simple: build something that actually w
 
 ---
 
-##  **Key Achievements & What I Delivered**
+##  **What I Delivered**
 
 * Achieved **R² = 0.99** and reduced RMSE by **~50%** after tuning XGBoost with RandomizedSearchCV
 * Built **4 specialized models** using age segmentation + a custom **Genetic Risk Score**, dropping young customer errors from **73% → 2.7%**
 * Deployed a **Streamlit app** with real-time predictions, refined based on feedback from insurance professionals
-  
+
+##  **Project Structure**
+
+
+HealthCare premium_prediction_project/
+│
+├── notebooks/
+│   ├── 00_premium_full_analysis.ipynb
+│   ├── 01_seg_premium_lt25.ipynb
+│   ├── 02_seg_premium_gt25.ipynb
+│   ├── 03_seg_genetic_lt25.ipynb
+│   └── 04_seg_genetic_gt25.ipynb
+│
+├── README.md
+└── other project files...
+
+
+
 ---
 
 ##  **Results (Based on Streamlit Testing)**
