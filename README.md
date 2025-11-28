@@ -9,7 +9,7 @@ When I started this project, my goal was simple: build something that actually w
 
 ---
 
-#  **Key Achievements & What I Delivered**
+##  **Key Achievements & What I Delivered**
 
 * Achieved **R² = 0.99** and reduced RMSE by **~50%** after tuning XGBoost with RandomizedSearchCV
 * Built **4 specialized models** using age segmentation + a custom **Genetic Risk Score**, dropping young customer errors from **73% → 2.7%**
@@ -17,7 +17,7 @@ When I started this project, my goal was simple: build something that actually w
   
 ---
 
-#  **Results (Based on Streamlit Testing)**
+##  **Results (Based on Streamlit Testing)**
 
 ### **Test 1 — Customer Under 25**
 
