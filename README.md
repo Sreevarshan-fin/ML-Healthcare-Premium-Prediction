@@ -47,7 +47,7 @@ A **1.87% error** is well within the **<10% requirement**.
 **Segment Performance:**  
 Only **2.49%** of young customers exceeded the 10% error threshold—meaning **97.51%** of predictions hit the target. The Genetic Risk Score made the difference here.
 
----
+
 
 ### **Test 2 — Customer Above 25**
 
@@ -71,6 +71,7 @@ Only **0.3%** exceeded the 10% threshold—meaning **99.7%** were accurate. No a
 
 * Both age groups meet the **<10% business requirement**
 * The Genetic Risk Score improved under-25 accuracy dramatically, while the 25+ group was already stable
+  
 ---
 
 # **How I Built This**
@@ -82,7 +83,7 @@ Insurance premiums depend on factors like age, medical history, lifestyle, and h
 
 My goal was to build a system that kept **residual error below 10%** for every customer segment, not just overall.
 
----
+
 
 #### **Task 1: Cleaning & Understanding the Data**
 
@@ -103,7 +104,6 @@ I reviewed all records carefully and used simple domain reasoning to fix the dat
 * Cleaned and prepared a final usable dataset
 * Used a **70% training / 30% testing** split for reliable evaluation
 
----
 
 #### **Task 2: Feature Engineering**
 
@@ -117,7 +117,6 @@ I improved the dataset with:
 
 These steps helped the model understand real medical risk patterns.
 
----
 
 #### **Task 3: Selecting the Right Algorithm**
 
@@ -138,7 +137,7 @@ Using **RandomizedSearchCV**, I tuned:
 
 After tuning, **R² hit 0.99** and **RMSE dropped by ~50%**, with stable performance on the test set.
 
----
+
 
 #### **Task 4: Fixing the High Error in Young Customers (<25)**
 
@@ -183,7 +182,7 @@ For adults (25+):
 | **≥ 25 Years** | **0.3% error** | **0.3% error (no change needed)**  |
 
 
----
+
 
 #### **Task 5: Making It Usable**
 
@@ -198,7 +197,7 @@ To make it practical:
 
 This turned the project into something insurance teams could actually use, not just a model.
 
----
+------------
 
 ##  **Business Impact**
 
@@ -206,7 +205,7 @@ This turned the project into something insurance teams could actually use, not j
 * Met the **<10% error requirement** across all customer groups
 * Built a deployed **Streamlit app** that insurance teams can use for real-time predictions
   
----
+--------------
 
 
 ## **What I Learned:**
@@ -218,6 +217,7 @@ I also learned that building a usable product matters as much as building an acc
 
 
 ---
+
 
 ## Tools & Technologies
 
