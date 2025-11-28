@@ -66,7 +66,7 @@ Only **0.3%** exceeded the 10% threshold—meaning **99.7%** were accurate. No a
 # **How I Built This**
 
 
-## **The Challenge**
+### **The Challenge**
 
 Insurance premiums depend on factors like age, medical history, lifestyle, and hereditary risks. The dataset had quality issues, and different age groups behaved completely differently—making accurate prediction tricky.
 
@@ -74,7 +74,7 @@ My goal was to build a system that kept **residual error below 10%** for every c
 
 ---
 
-## **Task 1: Cleaning & Understanding the Data**
+#### **Task 1: Cleaning & Understanding the Data**
 
 When I first opened the dataset, I found:
 
@@ -95,7 +95,7 @@ I reviewed all records carefully and used simple domain reasoning to fix the dat
 
 ---
 
-## **Task 2: Feature Engineering**
+#### **Task 2: Feature Engineering**
 
 I improved the dataset with:
 
@@ -109,7 +109,7 @@ These steps helped the model understand real medical risk patterns.
 
 ---
 
-## **Task 3: Selecting the Right Algorithm**
+#### **Task 3: Selecting the Right Algorithm**
 
 I tested:
 
@@ -134,7 +134,7 @@ After tuning:
 
 ---
 
-## **Task 4: Fixing the High Error in Young Customers (<25)**
+#### **Task 4: Fixing the High Error in Young Customers (<25)**
 
 During error analysis, I found a major issue:
 
@@ -144,7 +144,7 @@ During error analysis, I found a major issue:
 
 Because this failed the <10% requirement, I needed a deeper solution.
 
-### **Step 1: Age Segmentation**
+##### **Step 1: Age Segmentation**
 
 I split the dataset into:
 
@@ -153,7 +153,7 @@ I split the dataset into:
 
 This helped a bit, but the young group still had high errors.
 
-### **Step 2: Genetic Risk Score (Main Fix)**
+##### **Step 2: Genetic Risk Score (Main Fix)**
 
 Younger customers' premiums were strongly influenced by hereditary health factors.
 
@@ -169,7 +169,7 @@ For adults (25+):
 * So I set **Genetic Risk Score = 0**
 * The model still performed well
 
-### **Final Result**
+##### **Final Result**
 
 | Age Group      | Before Fix     | After Segmentation + Genetic Score |
 | -------------- | -------------- | ---------------------------------- |
@@ -179,7 +179,7 @@ For adults (25+):
 
 ---
 
-## **Task 5: Making It Usable**
+#### **Task 5: Making It Usable**
 
 I built a **Streamlit web app** that shows instant predictions.
 
@@ -194,7 +194,7 @@ This turned the project into something insurance teams could actually use, not j
 
 ---
 
-# 📈 **Business Impact**
+## 📈 **Business Impact**
 
 * Fixed the young customer error rate from **73% → 2.7%**, eliminating the biggest risk area
 * Met the **<10% error requirement** across all customer groups
@@ -202,9 +202,8 @@ This turned the project into something insurance teams could actually use, not j
   
 ---
 
-# 📘 **What I Learned**
 
-**What I Learned:**
+## **What I Learned:**
 
 The biggest lesson? High overall accuracy doesn't mean every group is predicted well. I could've spent weeks tuning hyperparameters, but the real breakthrough came from **understanding that young customers' premiums are driven by hereditary factors**—not from a better algorithm.
 
