@@ -8,6 +8,7 @@ The project started with **50,000 raw insurance records**, and I handled the ent
 I built a machine learning system that predicts health insurance premiums with **99% accuracy**. 
 
 When I started this project, my goal was simple: build something that actually works in a real insurance workflow, not just a model with a high score. The project started with **50,000 raw insurance records**, and I handled everything—from cleaning messy data to deploying a working Streamlit app that real users can interact with.
+
 ---
 
 #  **Key Achievements & What I Delivered**
@@ -22,6 +23,7 @@ When I started this project, my goal was simple: build something that actually w
 * Achieved **R² = 0.99** and reduced RMSE by **~50%** after tuning XGBoost with RandomizedSearchCV
 * Built **4 specialized models** using age segmentation + a custom **Genetic Risk Score**, dropping young customer errors from **73% → 2.7%**
 * Deployed a **Streamlit app** with real-time predictions, refined based on feedback from insurance professionals
+  
 ---
 
 #  **Results (Based on Streamlit Testing)**
