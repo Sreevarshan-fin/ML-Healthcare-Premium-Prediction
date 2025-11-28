@@ -129,9 +129,9 @@ Linear models struggled because health risks don’t increase in a straight line
 
 Using **RandomizedSearchCV**, I tuned:
 
-* `max_depth = 5`
-* `n_estimators = 50`
-* `learning_rate = 0.1`
+ `max_depth = 5`
+ `n_estimators = 50`
+ `learning_rate = 0.1`
 
 After tuning:
 
