@@ -126,11 +126,7 @@ Using **RandomizedSearchCV**, I tuned:
  `n_estimators = 50`
  `learning_rate = 0.1`
 
-After tuning:
-
-* R² improved to **0.99**
-* RMSE reduced by **~50%**
-* Performance was stable on the 70/30 split
+After tuning, **R² hit 0.99** and **RMSE dropped by ~50%**, with stable performance on the test set.
 
 ---
 
@@ -216,13 +212,21 @@ I also learned that building a usable product matters as much as building an acc
 # 🛠️ Tools & Technologies
 
 **Languages:** Python
+
 **Data Handling:** Pandas, NumPy
+
 **Visualization:** Matplotlib, Seaborn
+
 **Machine Learning:** Scikit-learn, XGBoost
+
 **Feature Engineering:** Label Encoding, One-Hot Encoding, Scaling, VIF
+
 **Model Tuning:** RandomizedSearchCV
+
 **Deployment:** Streamlit
+
 **Version Control:** Git, GitHub
+
 **Environment:** Jupyter Notebook
 
 
