@@ -219,7 +219,7 @@ I also learned that building a usable product matters as much as building an acc
 
 ---
 
-# 🛠️ Tools & Technologies
+## Tools & Technologies
 
 **Languages:** Python
 
