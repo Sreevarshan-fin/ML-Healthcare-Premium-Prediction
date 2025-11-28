@@ -29,6 +29,8 @@ When I started this project, my goal was simple: build something that actually w
 * Built **4 specialized models** using age segmentation + a custom **Genetic Risk Score**, dropping young customer errors from **73% → 2.7%**
 * Deployed a **Streamlit app** with real-time predictions, refined based on feedback from insurance professionals
 
+-------------------
+
 ##  **Project Structure**
 
 ```
