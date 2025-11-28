@@ -6,7 +6,7 @@
 I built a machine learning system that predicts health insurance premiums with 99% accuracy.
 
 **[![Open in Streamlit](https://img.shields.io/badge/Launch%20App-Streamlit-%23FF4B4B?logo=streamlit&logoColor=white&style=for-the-badge&labelColor=FF4B4B)](https://ml-healthcare-premium-prediction-7qrpw78zqct4zhdm7u8v2d.streamlit.app/)**  
-**[![Source Code](https://img.shields.io/badge/Source%20Code-GitHub-black?logo=github&style=for-the-badge)](YOUR_GITHUB_REPO_LINK_HERE)**
+
 
 
 **Problem Statement:**  
