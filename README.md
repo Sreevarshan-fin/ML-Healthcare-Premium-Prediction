@@ -2,8 +2,6 @@
 
 # 🏥 **Health Insurance Premium Prediction**
 
-I built a machine learning system that predicts health insurance premiums with **99% accuracy**.
-The project started with **50,000 raw insurance records**, and I handled the entire pipeline — from cleaning messy data to deploying a working Streamlit application that real users can interact with.
 
 I built a machine learning system that predicts health insurance premiums with **99% accuracy**. 
 
@@ -12,13 +10,6 @@ When I started this project, my goal was simple: build something that actually w
 ---
 
 #  **Key Achievements & What I Delivered**
-
-* Achieved **R² = 0.99** and **~50% lower RMSE** after tuning XGBoost using RandomizedSearchCV.
-* Processed **50,000+ records**, cleaned the data, and prepared a final dataset using encoding, scaling, and **VIF-based feature selection**.
-* Built **4 specialized models** using age segmentation and a custom **Genetic Risk Score** to capture hereditary health patterns.
-* Reduced **residual error to below 10%** for all customer groups (business requirement).
-* Developed and deployed a **Streamlit app** with real-time predictions and improved the UI based on feedback from insurance-domain professionals.
-
 
 * Achieved **R² = 0.99** and reduced RMSE by **~50%** after tuning XGBoost with RandomizedSearchCV
 * Built **4 specialized models** using age segmentation + a custom **Genetic Risk Score**, dropping young customer errors from **73% → 2.7%**
@@ -42,14 +33,10 @@ The under-25 segment was originally the hardest to predict.
 After adding the **Genetic Risk Score**, predictions became much more stable.
 A **1.87% error** is well within the **<10% requirement**.
 
-**Segment Insight:**
-
-* Only **2.49%** of young customers had error > 10%.
-* Meaning **97.51%** predictions were accurate.
-* Genetic Risk Score made the biggest impact in this group.
 
 **Segment Performance:**  
 Only **2.49%** of young customers exceeded the 10% error threshold—meaning **97.51%** of predictions hit the target. The Genetic Risk Score made the difference here.
+
 ---
 
 ### **Test 2 — Customer Above 25**
@@ -65,12 +52,6 @@ Only **2.49%** of young customers exceeded the 10% error threshold—meaning **9
 The model naturally performed well for adults without extra features.
 Predictions were stable and reliable.
 
-**Segment Insight:**
-
-* Only **0.3%** had error > 10%.
-* Meaning **99.7%** of predictions were accurate.
-* No further segmentation was needed for this group.
-
 **Segment Performance:**  
 Only **0.3%** exceeded the 10% threshold—meaning **99.7%** were accurate. No additional segmentation was needed for this group.
 
@@ -79,21 +60,11 @@ Only **0.3%** exceeded the 10% threshold—meaning **99.7%** were accurate. No a
 ### **Overall Summary**
 
 * Both age groups meet the **<10% business requirement**
-* Genetic Risk Score significantly improved accuracy for under-25 customers
-* The 25+ group was already stable with minimal tuning
-* Real tests show **~1.8% error**, confirming strong real-world reliability
-
-* Both age groups meet the **<10% business requirement**
 * The Genetic Risk Score improved under-25 accuracy dramatically, while the 25+ group was already stable
 ---
 
-# **How I Built This (Problem-Solving Journey)**
+# **How I Built This**
 
-## **Problem I Needed to Solve**
-
-Insurance premiums depend on many factors — age, medical history, lifestyle, and hereditary risks.
-The dataset had quality issues and age groups behaved differently, which made accurate prediction difficult.
-I needed to build a system that produced **consistent and fair predictions** while keeping **residual error < 10%** for every customer segment.
 
 ## **The Challenge**
 
@@ -225,25 +196,19 @@ This turned the project into something insurance teams could actually use, not j
 
 # 📈 **Business Impact**
 
-* Reduced **underwriting risk** by keeping error under 10%
-* Fixed the biggest risk area (young customers) from **73% → 2.7%**
-* Ensured **consistent and fair pricing** across all customer groups
-* Enabled **faster, data-driven premium estimation**
-* Added transparency using interpretable features like the Genetic Risk Score
-* Delivered a **deployable Streamlit tool** usable by insurance teams
-
 * Fixed the young customer error rate from **73% → 2.7%**, eliminating the biggest risk area
 * Met the **<10% error requirement** across all customer groups
 * Built a deployed **Streamlit app** that insurance teams can use for real-time predictions
+  
 ---
 
 # 📘 **What I Learned**
 
-* **Domain knowledge matters** — ML works best when you understand the industry
-* **Data quality > algorithms**
-* Thinking in terms of **business requirements** helped solve the 73% → 2.7% issue
-* **Error analysis** reveals deeper problems that accuracy hides
-* Building a product (UI, UX, feedback) is just as important as building the model
+**What I Learned:**
+
+The biggest lesson? High overall accuracy doesn't mean every group is predicted well. I could've spent weeks tuning hyperparameters, but the real breakthrough came from **understanding that young customers' premiums are driven by hereditary factors**—not from a better algorithm.
+
+I also learned that building a usable product matters as much as building an accurate model. Getting feedback from insurance professionals showed me which features actually mattered to users.
 
 
 
