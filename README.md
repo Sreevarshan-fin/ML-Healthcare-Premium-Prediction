@@ -222,6 +222,25 @@ I also learned that building a usable product matters as much as building an acc
 
 ---
 
+##  Final Thoughts
+
+This project taught me that real-world machine learning is not just about maximizing accuracy,  
+but about deeply understanding the business context and user needs.  
+
+The dramatic improvement in young customer predictions came from  
+**domain reasoning + better feature design**.
+
+Going forward, I will continue focusing on ML systems that are accurate, interpretable, and practical for real users.
+
+---
+
+## Future Improvements
+
+- Add SHAP-based feature explanations for transparent premium reasoning  
+- Enhance deployment using FastAPI + Docker for production-scale performance  
+- Implement automated data validation for incoming customer inputs
+
+-----------------
 
 ## Tools & Technologies
 
