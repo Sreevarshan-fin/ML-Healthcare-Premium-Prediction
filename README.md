@@ -31,10 +31,8 @@ When I started this project, my goal was simple: build something that actually w
 
 ##  **Project Structure**
 
-'''
-
+```
 HealthCare premium_prediction_project/
-
 │
 ├── notebooks/
 │   ├── 00_premium_full_analysis.ipynb
@@ -45,8 +43,8 @@ HealthCare premium_prediction_project/
 │
 ├── README.md
 └── other project files...
+```
 
-'''
 
 ---
 
