@@ -33,22 +33,30 @@ When I started this project, my goal was simple: build something that actually w
 
 ##  **Project Structure**
 
+## 📂 Project Structure
+
 ```
-HealthCare premium_prediction_project/
+Heathcare Premium_Prediction_Project/
 │
-├── notebooks/
-│   ├── 00_premium_full_analysis.ipynb
-│   ├── 01_seg_premium_lt25.ipynb
-│   ├── 02_seg_premium_gt25.ipynb
-│   ├── 03_seg_genetic_lt25.ipynb
-│   └── 04_seg_genetic_gt25.ipynb
+├── .devcontainer/                 # Development container settings
+├── artifacts/                     # Saved models / processed outputs
 │
-├── README.md
-└── other project files...
+├── #0_scope_of_work.pdf           # Project overview document
+│
+├── #1_premium_prediction_Full_Analysis.ipynb   # Full dataset analysis
+├── #2_premium_prediction_Young.ipynb           # <25 age group model
+├── #3_premium_prediction_Young_GR.ipynb        # <25 with genetic risk score
+├── #4_premium_prediction_rest.ipynb            # 25+ age group model with genetic risk score (as **Zero**)
+│
+├── main.py                        # Streamlit app backend
+├── prediction_helper.py           # Preprocessing + prediction logic
+├── requirements.txt               # Dependencies
+│
+├── .gitignore
+├── LICENSE
+└── README.md                      # Project documentation
 ```
 
-
----
 
 ##  **Results (Based on Streamlit Testing)**
 
