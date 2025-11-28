@@ -200,7 +200,7 @@ This turned the project into something insurance teams could actually use, not j
 
 ---
 
-## 📈 **Business Impact**
+##  **Business Impact**
 
 * Fixed the young customer error rate from **73% → 2.7%**, eliminating the biggest risk area
 * Met the **<10% error requirement** across all customer groups
