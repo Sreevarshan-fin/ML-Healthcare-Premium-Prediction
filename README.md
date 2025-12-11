@@ -117,16 +117,16 @@ My goal was to build a system that kept **residual error below 10%** for every c
 
 When I first opened the dataset, I found:
 
-* Ages above 100
+* Ages above 100 (out liers detection)
 * Repeated or unrealistic medical history
-* Extremely high income values
+* Extremely high income values (out liers detection)
 * Missing or inconsistent entries
 
 I reviewed all records carefully and used simple domain reasoning to fix the data.
 
 **What I did:**
 
-* Removed biologically impossible values
+* Refined the dataset by eliminating physiologically invalid records and capping extreme age-related outliers.
 * Used **quantile capping** to limit extreme outliers
 * Kept genuine high-income customers
 * Cleaned and prepared a final usable dataset
