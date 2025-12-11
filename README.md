@@ -26,7 +26,7 @@ When I started this project, my goal was simple: build something that actually w
 ##  **What I Delivered**
 
 * Achieved **R² = 0.99** and reduced RMSE by **~50%** after tuning XGBoost with RandomizedSearchCV
-* Built **4 specialized models** using age segmentation + a custom **Genetic Risk Score**, dropping young customer errors from **73% → 2.7%**
+* Designed four specialized, **age-segmented models with a Genetic Risk Score**, achieving a major error reduction for young customers — 73% down to 2.7%.
 * Deployed a **Streamlit app** with real-time predictions, refined based on feedback from insurance professionals
 
 -------------------
